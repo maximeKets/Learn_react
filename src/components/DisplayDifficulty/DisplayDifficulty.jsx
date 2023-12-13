@@ -1,6 +1,6 @@
 import s from './style.module.css'
-export function DisplayDifficulty(props) {
+export function DisplayDifficulty({dificulty}) {
     return <div className={s.container}>
-        { props.difficulty ? `Difficulty set to : ${props.difficulty}` : `Pas de difficultés selectionné`}
+        { dificulty ? `Difficulty set to : ${dificulty}` : `Pas de difficultés selectionné`}
     </div>
 }

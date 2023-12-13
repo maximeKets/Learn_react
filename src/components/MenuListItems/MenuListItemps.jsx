@@ -1,12 +1,12 @@
 import {useState} from "react";
 import s from './style.module.css'
 
-export function MenuListItemps(props) {
+export function MenuListItemps({onClick, difficulty}) {
     const [isHovered, setIsHovered] = useState(false)
-    console.log('***', isHovered)
-    return <div className={s.container}
-                style={{ backgroundColor : isHovered ? "green" : "grey" } }
+    return <div
+                onClick={() => onClick(difficulty)}
+                style={{backgroundColor: isHovered ? "green" : "grey"}}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
-        set to : {props.difficulty}</div>
+        set to : {difficulty}</div>
 }
